@@ -4,27 +4,28 @@ import Button from "../../(components)/Button.jsx";
 import ProgressBar from "../../(components)/ProgressBar";
 import { useRouter } from "expo-router";
 
-export default function StepThree() {
-  const router = useRouter()
+export default function StepForth() {
+  const router = useRouter();
+  
   return (
     <SafeAreaView style={tw`flex-1 bg-gray-800`}>
       {/* Top Section with Logo and Doctor Image */}
-      
       <View style={tw`bg-teal-600 w-full min-h-90 relative rounded-b-full pb-8 pt-12 px-6 justify-center items-center`}>
         {/* Logo */}
           <Image 
             source={require("../../../assets/logo.png")} 
-            style={tw`w-4/5 h-45 absolute top-9`}
+            style={tw`w-4/5 h-40 absolute`}
             resizeMode="cover"
           />
         
         {/* Doctor Image */}
           <Image 
-            source={require("../../../assets/success1.png")} 
-            style={tw`w-full h-150 absolute -bottom-35`}
+            source={require("../../../assets/success2.png")} 
+            style={tw`w-full h-100 absolute -bottom-30`}
             resizeMode="cover"
           />
       </View>
+
       {/* Middle Section with Text and Progress */}
       <View style={tw`flex-1 bg-gray-800 px-6 pt-8`}>
         <View style={tw`items-center mb-8`}>
@@ -38,9 +39,9 @@ export default function StepThree() {
           {/* Progress Bar */}
           <View style={tw`w-full px-4`}>
             <ProgressBar 
-              currentStep={1} 
-              tw = "w-32 mx-auto"
+              currentStep={2} 
               totalSteps={3}
+              tw="w-32 mx-auto"
               activeColor="#50B8C3"
               inactiveColor="#6C757D"
             />
@@ -52,11 +53,11 @@ export default function StepThree() {
       <View style={tw`px-6 pb-8`}>
         <Button 
           title="Next" 
-          onPress={() => router.push("/SignUp/StepForth")}
+          onPress={() => router.push("/SignUp/StepFifth")}
         />
         <Button 
           title="Skip" 
-          onPress={() => console.log("Skip pressed")}
+          onPress={() => router.push("/")}
           style={tw`bg-gray-700`}
         />
       </View>

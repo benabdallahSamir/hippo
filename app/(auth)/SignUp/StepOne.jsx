@@ -20,7 +20,7 @@ export default function StepOne() {
 
   const handleNextPress = () => {
     // router.push("/SignUp/StepTwo");
-    router.push("/Notification");
+    router.push("/SignUp/StepTwo");
   };
 
   return (

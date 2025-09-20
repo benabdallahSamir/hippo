@@ -41,17 +41,17 @@ export default function SignUp() {
       !formData.university ||
       !formData.yearOfStudy
     ) {
-      Alert.alert("Error", "Please fill in all fields");
+      console.log("Please fill in all fields");
       return;
     }
 
     if (formData.password !== formData.repeatPassword) {
-      Alert.alert("Error", "Passwords do not match");
+      console.log("Passwords do not match");
       return;
     }
 
     if (formData.password.length < 6) {
-      Alert.alert("Error", "Password must be at least 6 characters long");
+      console.log("Password must be at least 6 characters long");
       return;
     }
 
